@@ -39,7 +39,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="bit:"
+                android:text="Number:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3"
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/bitNumber"
+                android:id="@+id/number"
                 android:layout_weight="1"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -60,54 +60,67 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:text="byte:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:textSize="18sp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/byteNumber"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
             <Button
-                android:text="CALCULATE"
-                android:layout_width="177dp"
+                android:text="to bit"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button"
-                android:onClick="calculate" />
+                android:layout_weight="1"
+
+                android:onClick="calcBit" />
+
 
             <Button
-                android:text="reset"
+                android:text="to byte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
                 android:layout_weight="1"
-                android:onClick="reset" />
+                android:onClick="calcByte" />
+
+            <Button
+                android:text="clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:onClick="resetFields" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:text="the empty field is the result-field! If no one is empty, either delete one or press reset!"
+                android:text="Result:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:layout_weight="1" />
+                android:id="@+id/textView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewResult"
+                android:layout_weight="1"
+                android:textSize="18sp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <Button
+                android:text="about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:onClick="showAbout" />
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>
